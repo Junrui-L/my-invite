@@ -137,5 +137,22 @@
         }
     })();
 </script>
+
+jQuery方法
+<!--<script type="text/javascript">
+$(document).ready(function(){
+ var $tabTitle = $('.tab-title').find('li');
+ var $tabList = $('.tab-conn > div');
+ $tabTitle.click(function(){
+  $tabTitle.each(function(){
+   $tabTitle.removeClass('active');
+  });
+  var index = $tabTitle.index(this);
+  $(this).addClass('active'); 
+  $tabList.eq(index).addClass('current').siblings().removeClass('current');
+ });
+});
+</script>-->
+
 </body>
 </html>
