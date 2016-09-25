@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>jQuery tab</title>
+    <script type="text/javascript" src="tianmiyaoqing/js/jquery-1.9.1.min.js"></script>
+    <title>原生js tab</title>
+    <style type="text/css">
+        .tab{
+            margin:10px auto;
+            position:relative;
+            width:300px;
+        }
+        ul,li{
+            list-style-type:none;
+            padding:0;
+            margin:0;
+            font:13px/20px SimSun,arial;
+            color:#333;
+            text-align:center;
+        }
+        .tabTltle ul li{
+            float:left;
+            position:relative;
+            background:#fefefe;
+            background:-webkit-gradient(linear,left top,left bottom, from(#fefefe), to(#ededed));
+            padding:7px 15px;
+            border:1px #ddd solid;
+            margin-right:-1px;
+            cursor:pointer;
+
+        }
+
+        .tabTltle ul li:hover {
+            background: #ffc;
+
+        }
+        .tabTltle ul li.active{
+            background:#fff;
+            font-weight: bold;
+        }
+
+
+        .clearfix{
+        }
+        .clearfix:after{
+            display:block;
+            clear:both;
+            overflow:hidden;
+            content:"";
+        }
+        .tabConn{
+            border:1px #eee solid;
+            position:relative;
+            height:100px
+        }
+        .tabConn div{
+            position:absolute;
+            display: none;
+            filter:alpha(opacity=0);
+            padding:5px;
+            text-align:center;
+            width:100%;
+        }
+        .tabConn div.current{
+            display: block;
+            filter:alpha(opacity=100);
+        }
+    </style>
+</head>
+<body>
+<div id="tab" class="tab">
+    <div class="tabTltle">
+        <ul class="clearfix">
+            <li class="active">标题一</li>
+            <li>标题二</li>
+            <li>标题三</li>
+            <li>标题四</li>
+        </ul>
+    </div>
+    <div class="tabConn">
+        <div class="current">
+            <ul>
+                <li>这是内容1</li>
+                <li>这是内容1</li>
+                <li>这是内容1</li>
+                <li>这是内容1</li>
+            </ul>
+        </div>
+
+        <div>
+            <ul>
+            <li>这是内容2</li>
+            <li>这是内容3</li>
+            <li>这是内容2</li>
+            <li>这是内容2</li>
+        </ul>
+        </div>
+        <div>
+            <ul>
+                <li>这是内容3</li>
+                <li>这是内容3</li>
+                <li>这是内容3</li>
+                <li>这是内容3</li>
+            </ul>
+
+        </div>
+        <div>
+            <ul>
+                <li>这是内容4</li>
+                <li>这是内容4</li>
+                <li>这是内容4</li>
+                <li>这是内容4</li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    (function(){
+        var tab = document.getElementById("tab");
+        var tabList = tab.getElementsByTagName("div")[0].getElementsByTagName("li");
+        var tabConn = tab.getElementsByTagName("div")[1].getElementsByTagName("div");for(var i=0;i<tabList.length;i++){
+            tabList[i].index = i;
+            tabList[i].onclick = function(){
+                showConn(this.index);
+            }
+        }
+        function showConn(_index){
+            var index = _index;for(var j=0;j<tabList.length;j++){
+                tabList[j].className = "";
+                tabConn[j].className = "";
+            }
+            tabConn[index].className="current";
+            tabList[index].className="active";
+        }
+    })();
+</script>
+</body>
+</html>

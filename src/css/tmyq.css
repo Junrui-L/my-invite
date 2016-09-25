@@ -1,14 +1,13 @@
 @charset "UTF-8";
-body {
-  background: #f9d448; }
+html, body {
+  height: 100%;
+  width: 100%; }
 
 section {
-  margin-top: .5rem;
-  padding-top: .5rem;
-  padding-bottom: .2rem;
+  height: 100%;
   width: 100%;
   background: #f9d448 url("../img/tmyq.png") no-repeat left top;
-  background-size: 100%;
+  background-size: contain;
   position: relative; }
   section img.yqhy {
     display: block;

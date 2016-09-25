@@ -69,6 +69,7 @@ gulp.task("serve", [ "html","scss","css", "js-watch"], function () {
         server: "./src",           //从何处加载服务器
 		startPath: 'index.html',    //默认加载的页面 ，也可用index
 		online: "true",
+		notify: false,
 		scrollProportionally: "false", //gundong
         browser: ["chrome", "firefox"] //打开的浏览器
     });
