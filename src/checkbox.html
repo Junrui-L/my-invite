@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/base.css">
+    <script src="js/lib/jquery1.91.min.js"></script>
+    <style>
+        body {
+            font-size: 28px;
+        }
+
+        .inputs {
+            width: 300px;
+            margin: 30px auto;
+        }
+
+        .total {
+            font-size: 30px;
+            background: #999999;
+        }
+
+        label {
+            width: 200px;
+        }
+        /*.store {*/
+            /*margin-bottom: 12px;*/
+        /*}*/
+        .goods {
+            text-indent: 10px;
+        }
+
+        input {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            width: 15px;
+            height: 15px;
+            background: url("img/select-P.png") no-repeat  left top;
+            background-size: 15px 30px;
+        }
+
+        input:checked {
+            width: 15px;
+            height: 15px;
+            background: url("img/select-P.png") no-repeat left -15px;
+            background-size: 15px 30px;
+        }
+    </style>
+    <!--<script>-->
+
+        <!--$(function(){-->
+            <!--console.log($('.store').attr("checked"))-->
+            <!--console.log($("input[name='good']"))-->
+
+                <!--if($(".store").prop("checked") == true) {-->
+                    <!--$(this).parent().parent().find("input[name='good']").prop('checked',true)-->
+<!--//            $(this).parent(".sd").siblings().find("good").attr("checked")-->
+                <!--};-->
+            <!---->
+
+        <!--})-->
+
+
+    <!--</script>-->
+
+
+</head>
+<body style="font-size: 18px;">
+<!--<div class="inputs">-->
+    <!--<div class="sd"><label ><input type="checkbox" class="store" /> -生鲜-</label>-->
+
+        <!--<div class="goods"><label> <input type="checkbox" name="good" /> 水果</label></div>-->
+        <!--<div class="goods"><label> <input type="checkbox" name="good"/>  蔬菜</label></div>-->
+    <!--</div>-->
+    <!--<div class="sd"><label ><input type="checkbox" class="store"> -清洁用品-</label>-->
+
+        <!--<div class="goods"><label> <input type="checkbox" name="good"/> 洗衣粉</label></div>-->
+        <!--<div class="goods"><label> <input type="checkbox" name="good"/> 肥皂</label></div>-->
+    <!--</div>-->
+
+    <!--<p class="total"><label><input type="checkbox"/>全选</label></p>-->
+<!--</div>-->
+
+
+<input type="checkbox" id="del" value="all"/>
+
+<input type="checkbox" name="della" value=""/>
+<input type="checkbox" name="della" value=""/>
+<input type="checkbox" name="della" value=""/>
+
+<script>
+    $(function() {
+        $("#del").click(function() {
+            $(this).prop("checked",true);
+//            $('input[name="della"]').attr("checked",true)
+            if($(this).prop("checked")){
+                $('input[name="della"]').prop("checked",true);
+            }else if($(this).prop("checked",false)) {
+                $(this).prop("checked",true);
+            }
+
+        });
+        var $subBox = $("input[name='della']");
+        $subBox.click(function(){
+            $("#del").prop("checked",$subBox.length == $("input[name='della']:checked").length ? true : false);
+
+        });
+    });
+</script>
+
+</body>
+</html>
