@@ -1,0 +1,90 @@
+@charset "utf-8";
+body {
+  background: #f9d448;
+}
+
+section {
+  margin-top: .5rem;
+  padding-top: .5rem;
+  padding-bottom: .2rem;
+  width: 100%;
+  background: #f9d448 url("../img/tmyq.png") no-repeat left top;
+  background-size: 100%;
+  position: relative;
+  img.yqhy {
+    display: block;
+    margin: 0 auto 3rem;
+    width: 80%;
+    height: auto;
+  }
+
+  .send, .geM {
+    position: absolute;
+    height: auto;
+  }
+
+  a {
+    display: block;
+    height: .5rem;
+    width: 88%;
+    margin: 2rem auto .2rem;
+    border-radius: .05rem;
+    font-size: 0.2rem;
+    line-height: .5rem;
+    text-align: center;
+    font-family: "黑体";
+    background: #ff6d00;
+    color: #fff;
+  }
+}
+/*媒体查询进行各分辨率适配*/
+/*iphone5*/
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  section .send {
+    width: .98rem;
+    height: auto;
+    right: 4%;
+    top: 1.7rem;
+  }
+
+  section .geM {
+    width: 1.6rem;
+    height: auto;
+    left: 4%;
+    top: 2rem;
+  }
+}
+
+/*iphone6*/
+@media screen and (min-width: 375px) and (max-width: 627px) {
+  section .send {
+    width: .98rem;
+    height: auto;
+    right: 4%;
+    top: 2.2rem;
+  }
+
+  section .geM {
+    width: 1.6rem;
+    height: auto;
+    left: 4%;
+    top: 2.3rem;
+  }
+}
+
+/*iphone6s*/
+@media screen and (min-width: 414px) and (max-width: 736px) {
+  section .send {
+    width: .98rem;
+    height: auto;
+    right: 4%;
+    top: 2.4rem;
+  }
+
+  section .geM {
+    width: 1.6rem;
+    height: auto;
+    left: 4%;
+    top: 2.65rem;
+  }
+}

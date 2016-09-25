@@ -1,0 +1,178 @@
+@charset "UTF-8";
+body {
+  background: #e2d493; }
+
+section {
+  margin-top: .5rem;
+  padding-top: 85%;
+  padding-bottom: .2rem;
+  height: 90%;
+  width: 100%;
+  background: url("../img/tmqj.png") no-repeat left top;
+  background-size: 100%;
+  position: relative; }
+  section .form {
+    font-size: 0.16rem; }
+  section input {
+    height: .4rem;
+    width: 100%;
+    border: none;
+    font-size: 0.16rem;
+    font-family: "黑体";
+    margin-bottom: .05rem;
+    text-indent: .2rem;
+    outline: none; }
+  .yzm {
+    position: relative; }
+    .yzm span {
+      position: absolute;
+      left: .2rem;
+      top: .1rem;
+      font-family: "黑体";
+      color: #414141; }
+    .yzm input {
+      box-sizing: border-box;
+      padding-left: .8rem;
+      padding-right: 1.8rem;
+      text-indent: 0;
+      width: 100%; }
+    .yzm .get-code {
+      width: 1.2rem;
+      height: .3rem;
+      line-height: .3rem;
+      margin: 0;
+      font-size: .14rem;
+      text-align: center;
+      background: #fff;
+      color: #03a3dd;
+      border: 1px solid #03a3dd;
+      border-radius: .08rem;
+      position: absolute;
+      top: .05rem;
+      right: .2rem;
+      padding: 0; }
+  section p {
+    margin-top: .6rem;
+    margin-left: 6%;
+    font-family: "黑体";
+    height: .2rem;
+    line-height: .2rem; }
+    section p label, section p span, section p a {
+      float: left; }
+    section p label {
+      display: block;
+      height: .2rem;
+      width: 1.5rem; }
+      section p label input:checked {
+        height: .2rem;
+        width: .2rem;
+        float: left;
+        -webkit-appearance: none;
+        background: url(../img/select-P.png) no-repeat 0 -0.2rem;
+        background-size: .2rem .4rem; }
+      section p label input {
+        height: .2rem;
+        width: .2rem;
+        border-radius: 50%;
+        float: left;
+        -webkit-appearance: none;
+        background: url(../img/select-P.png) no-repeat 0 0;
+        background-size: .2rem .4rem; }
+    section p a {
+      color: #03a3dd; }
+  section .register {
+    display: block;
+    height: .4rem;
+    width: 88%;
+    border: none;
+    outline: none;
+    margin: .1rem auto 0;
+    border-radius: .08rem;
+    font-size: 0.16rem;
+    line-height: .4rem;
+    text-align: center;
+    text-indent: 0;
+    font-family: "黑体";
+    background: #ff6d00;
+    color: #fff; }
+
+/* overlay弹窗层 */
+.overlay,
+.modal .modal-ft {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center; }
+
+.overlay.active {
+  z-index: 980; }
+
+.modal {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+
+.modal {
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 0 10px;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transform: translate3d(0, 0, 0) scale(0.815);
+  transform: translate3d(0, 0, 0) scale(0.815);
+  -webkit-transition-property: -webkit-transform, opacity;
+  transition-property: transform, opacity; }
+
+.modal.modal-in {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0) scale(1);
+  transform: translate3d(0, 0, 0) scale(1); }
+
+.modal .modal-hd {
+  text-align: center;
+  line-height: 40px;
+  background-color: #0078e7;
+  color: #fff; }
+
+.modal .modal-bd {
+  padding: 15px; }
+
+.modal .modal-ft {
+  border-top: 1px solid #cccccc; }
+
+.modal .modal-ft .btn-modal {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  background-color: #fefefe;
+  text-align: center;
+  line-height: 40px;
+  color: #0078e7; }
+
+.modal .modal-ft .btn-modal:first-child {
+  border-right: 1px solid #cccccc; }
+
+.modal .modal-ft .btn-modal:last-child {
+  border-right: none; }
+
+.modal .modal-ft .btn-modal:hover, .modal .modal-ft .btn-modal:active {
+  background-color: #d9d9d9; }
+
+/*# sourceMappingURL=tmqj.css.map */
