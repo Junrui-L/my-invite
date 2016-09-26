@@ -1,0 +1,179 @@
+@charset "utf-8";
+$blue: #03a3dd;
+$bg:#f0efed;
+$browser-default-font-size: 75px !default;
+$font-size: 16px;
+@function pxTorem($px){//$px为需要转换的尺寸
+  @return $px / $browser-default-font-size * 1rem;
+}
+
+/*字体的大小*/
+@mixin font-dpr($font-size){
+  font-size: $font-size;
+  // for iphone5 iphone6
+  [data-dpr="2"] & {
+    font-size: $font-size * 2;
+  }
+
+  // for mx3
+  [data-dpr="2.5"] & {
+    font-size:$font-size * 2.5;
+  }
+  // for 小米note
+  [data-dpr="2.75"] & {
+    font-size:$font-size * 2.75;
+  }
+  // for iphone6s
+  [data-dpr="3"] & {
+    font-size: $font-size * 3;
+  }
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background: $bg;
+}
+
+
+.add-wrap{
+  padding-top: pxTorem(30px);
+  width:100%;
+  min-height: pxTorem(30px);
+  font-size:  pxTorem(18px);
+  @include font-dpr(16px);
+
+}
+
+.form-group {
+  height: pxTorem(100px);
+  line-height: pxTorem(100px);
+  background: #fff;
+  width: 100%;
+  border-top: pxTorem(1px) solid #dcdcdc;
+  margin-bottom: pxTorem(10px);
+  box-sizing: border-box;
+  padding-left: pxTorem(30px);
+  label {
+    width: pxTorem(240px);
+  }
+  input {
+    border: none;
+    outline: none;
+    @include font-dpr(16px);
+  }
+
+}
+
+.form-group1{
+  padding-left: pxTorem(30px);
+  background: #fff;
+  border-bottom: pxTorem(1px) solid #dcdcdc;
+  margin-bottom: pxTorem(30px);
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    outline: none;
+    height: pxTorem(100px);
+    padding: 0 pxTorem(30px);
+    @include font-dpr(18px);
+    font-family: "Microsoft Yahei", "微软雅黑", Arial, Tahoma;
+    border-bottom: pxTorem(1px) solid #dcdcdc;
+    width: pxTorem(300px);
+  }
+
+  label {
+    display: inline-block;
+    width: 4em;
+    height: pxTorem(100px);
+    line-height: pxTorem(100px);
+    text-align: right;
+    position: relative;
+  }
+   label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: pxTorem(320px);
+    bottom: pxTorem(20px);
+    background: #fff url(../images/optionS.png) no-repeat left pxTorem(-36px);
+    background-size: pxTorem(72px) pxTorem(72px);
+    height: pxTorem(36px) ;
+    width:  pxTorem(36px) ;
+
+  }
+
+   div:last-child select {
+    border: 0;
+  }
+}
+
+.form-group2 {
+  min-height: pxTorem(100px);
+  background: #fff;
+  padding-left: pxTorem(30px);
+  margin-bottom: pxTorem(20px);
+  label {
+    float: left;
+    width: pxTorem(240px);
+    height: pxTorem(100px);
+    line-height: pxTorem(100px);
+  }
+
+  input {
+    border: none;
+    outline: none;
+    width: 70%;
+    line-height: pxTorem(100px);
+    @include font-dpr(16px);
+  }
+
+}
+
+.check-group {
+  //height: 50px;
+  //line-height: 55px;
+  padding-left: pxTorem(30px);
+  line-height: pxTorem(36px);
+  input {
+    float: left;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: pxTorem(36px);
+    width: pxTorem(36px);
+    background: url(../images/optionS.png) no-repeat pxTorem(-36px) 0;
+    background-size: pxTorem(72px) pxTorem(72px);
+  }
+
+  input:checked {
+    float: left;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: pxTorem(36px);
+    width: pxTorem(36px);
+    background: url(../images/optionS.png) no-repeat 0 0;
+    background-size: pxTorem(72px) pxTorem(72px);
+  }
+
+
+  span {
+    float: left;
+    @include font-dpr(14px);
+    line-height: pxTorem(36px);
+  }
+}
+
+.btn {
+  display: block;
+  background: none;
+  border: none;
+  height: pxTorem(80px);
+  width: 80%;
+  @include font-dpr(18px);
+  background-color: #ff6d00;
+  color: #fff;
+  margin: pxTorem(200px) auto 0;
+}
+
+

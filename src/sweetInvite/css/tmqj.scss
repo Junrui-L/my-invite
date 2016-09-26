@@ -1,0 +1,142 @@
+@charset "utf-8";
+$blue: #03a3dd;
+$bg:#ff6d00;
+body {
+ background: #e2d493;
+  font-family:Helvetica;
+}
+
+.goal {
+  position: absolute;
+  font-size: .14rem;
+  text-align: center;
+  width: 100%;
+  top: .44rem;
+
+ div {
+    margin: 0;
+   line-height: .25rem;
+  }
+
+}
+
+
+section {
+  padding-top: 88%;
+  padding-bottom: .2rem;
+  height: 90%;
+  width: 100%;
+  background: url("../images/tmqj.png") no-repeat left top;
+  background-size: 100%;
+  position: relative;
+  .form {
+    font-size: 0.16rem;
+  }
+
+  input {
+    height: .4rem;
+    width: 100%;
+    border: none;
+    font-family:Helvetica;
+    font-size: 0.16rem;
+    margin-bottom: .05rem;
+    text-indent: .2rem;
+    outline: none;
+  }
+
+  input::-webkit-input-placeholder{ /* WebKit browsers */
+    color:#666;
+  }
+  input::-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:#666;
+  }
+  input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:#666;
+  }
+
+  @at-root .yzm {
+    position: relative;
+    input {
+      box-sizing: border-box;
+      font-family:Helvetica;
+      padding-right: 1.8rem;
+      text-indent: .2rem;
+      width:100%;
+    }
+    .get-code {
+      width: 1.2rem;
+      height: .3rem;
+      line-height: .3rem;
+      margin: 0;
+      font-size: .14rem;
+      text-align: center;
+      background: #fff;
+      color: $blue;
+      border: 1px solid $blue;
+      border-radius: .08rem;
+      position: absolute;
+      top: .05rem;
+      right: .2rem;
+      padding: 0;
+    }
+  }
+
+
+  p {
+    margin-top: .6rem;
+    margin-left: 6%;
+    font-family:Helvetica;
+    height: .2rem;
+    line-height: .2rem;
+    label,span,a {
+      float: left;
+    }
+    label {
+      display: block;
+      height: .2rem;
+      width: 1.5rem;
+      input:checked {
+        height: .2rem;
+        width: .2rem;
+        float: left;
+        -webkit-appearance: none;
+        appearance: none;
+        background:url(../images/select-P.png) no-repeat 0 -0.2rem;
+        background-size: .2rem .4rem;
+      }
+
+      input{
+        height: .2rem;
+        width: .2rem;
+        border-radius: 50%;
+        float: left;
+        font-family:Helvetica;
+        -webkit-appearance: none;
+        appearance: none;
+        background:url(../images/select-P.png) no-repeat 0 0;
+        background-size: .2rem .4rem;
+      }
+    }
+    a {
+      color: $blue;
+    }
+
+  }
+
+  .register {
+    display: block;
+    height: .4rem;
+    width: 88%;
+    border: none;
+    outline: none;
+    margin: .1rem auto 0;
+    border-radius: .08rem;
+    font-size: 0.16rem;
+    line-height: .4rem;
+    text-align: center;
+    text-indent: 0;
+    background: $bg;
+    color: #fff;
+  }
+}
+

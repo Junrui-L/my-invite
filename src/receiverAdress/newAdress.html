@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <!-- 为移动设备添加 viewport -->
+        <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-itunes-app" content="app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telphone=no, email=no"/>
+    <title>新增收货地址</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/shdz.css">
+    <script src="js/lib/jquery1.91.min.js"></script>
+    <!--<script src="js/lib/flexible.js"></script>-->
+    <!--<script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>-->
+    <script src="js/lib/fastclick.js"></script>
+    <script>
+        window.onload = function () {
+            var dpr, rem, scale;
+            var docEl = document.documentElement;
+            var metaEl = document.querySelector('meta[name="viewport"]');
+            dpr = window.devicePixelRatio || 1;
+            rem = docEl.clientWidth * dpr / 10;
+            scale = 1 / dpr;
+// 设置viewport，进行缩放，达到高清效果
+            metaEl.setAttribute('content', 'width=device-width'  + ',initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale + ',user-scalable=no');
+
+// 设置data-dpr属性，留作的css hack之用
+            docEl.setAttribute('data-dpr', dpr);
+//            设置根元素的大小
+            docEl.setAttribute('font-size', rem + 'px')
+        };
+    </script>
+</head>
+<body>
+    <div class="add-wrap">
+        <form id="input-Form" name="form1" action="" method="post">
+
+            <div class="form-group">
+                <label for="username" class="name-label">收货人:</label>
+                <input type="text" class="form-control" id="username" name="address.consignee" maxlength="10" value=""
+                       placeholder="请输入收货联系人姓名">
+            </div>
+            <div class="form-group">
+                <label for="usertel">联系方式:</label>
+                <input type="text" class="form-control" id="usertel" name="address.mobile" maxlength="20"  value=""
+                       placeholder="请输入收货联系人电话">
+            </div>
+            <div class="form-group1 clerfix" id="select_contact1">
+                <div>
+                    <label for="province">选择省:</label><select name="address.province" id="province"  value="" onchange="onSelectChange(this,'city');">
+                    <option value="">请选择</option>
+                </select>
+                </div>
+               <div>
+                   <label for="province">市:</label><select name="address.city" id="city" value="${address.city}"  onchange="onSelectChange(this,'district');">
+                   <option value="">请选择</option>
+               </select>
+               </div>
+
+               <div>
+                   <label for="province">区:</label><select name="address.district" id="district"  value="${address.district}">
+                        <option value="">请选择</option>
+                   </select>
+               </div>
+
+            </div>
+            <div class="form-group2 clerfix">
+                <label for="useraddress">详细地址:</label>
+                <input type="text" class="form-control" id="useraddress" name="address.addressName" maxlength="60" value=""
+                       placeholder="请输入详细地址" />
+            </div>
+            <div class="check-group clerfix">
+                    <input  type="checkbox" id="square-radio-1" name="address.default_Address">
+                    <span>设置为默认收货地址</span>
+            </div>
+            <input class="btn" type="button" onclick="saveupdate()" id="inputForm"  value="保存"/>
+        </form>
+    </div>
+</body>
+</html>

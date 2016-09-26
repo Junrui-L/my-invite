@@ -7,8 +7,8 @@
     <title>购物车结算</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta name="format-detection" content="telephone=no"/>
     <meta name="renderer" content="webkit">
     <!--<![endif]-->
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -50,7 +50,7 @@
             -moz-appearance: none;
             width: 15px;
             height: 15px;
-            background: url("img/select-P.png") no-repeat  left top;
+            background: url("img/select-P.png") no-repeat left top;
             background-size: 15px 30px;
         }
 
@@ -73,7 +73,7 @@
                 <input type="checkbox" class="goods-check GoodsCheck">
             </label>
             <button type="button" class="minus">-</button>
-            <input type="text" class="am-num-text" value="1" />
+            <input type="text" class="am-num-text" value="1"/>
             <button type="button" class="plus">+</button>
         </div>
         <p>商品单价：￥<span class="shop-total-amount GoodsPrice">20.00</span></p>
@@ -85,7 +85,7 @@
                 <input type="checkbox" class="goods-check GoodsCheck">
             </label>
             <button type="button" class="minus">-</button>
-            <input type="text" class="am-num-text" value="1" />
+            <input type="text" class="am-num-text" value="1"/>
             <button type="button" class="plus">+</button>
         </div>
         <p>商品单价：￥<span class="shop-total-amount GoodsPrice">9.90</span></p>
@@ -97,7 +97,7 @@
                 <input type="checkbox" class="goods-check GoodsCheck">
             </label>
             <button type="button" class="minus">-</button>
-            <input type="text" class="am-num-text" value="1" />
+            <input type="text" class="am-num-text" value="1"/>
             <button type="button" class="plus">+</button>
         </div>
         <p>商品单价：￥<span class="shop-total-amount GoodsPrice">10.00</span></p>
@@ -118,7 +118,7 @@
                 <input type="checkbox" class="goods-check GoodsCheck">
             </label>
             <button type="button" class="minus">-</button>
-            <input type="text" class="am-num-text" value="1" />
+            <input type="text" class="am-num-text" value="1"/>
             <button type="button" class="plus">+</button>
         </div>
         <p>商品单价：￥<span class="shop-total-amount GoodsPrice">30.00</span></p>
@@ -130,7 +130,7 @@
                 <input type="checkbox" class="goods-check GoodsCheck">
             </label>
             <button type="button" class="minus">-</button>
-            <input type="text" class="am-num-text" value="1" />
+            <input type="text" class="am-num-text" value="1"/>
             <button type="button" class="plus">+</button>
         </div>
         <p>商品单价：￥<span class="shop-total-amount GoodsPrice">20.00</span></p>
@@ -151,7 +151,7 @@
 <script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
 <script>
     // 数量减
-    $(".minus").click(function() {
+    $(".minus").click(function () {
         var t = $(this).parent().find('.am-num-text');
         t.val(parseInt(t.val()) - 1);
         if (t.val() <= 1) {
@@ -160,7 +160,7 @@
         TotalPrice();
     });
     // 数量加
-    $(".plus").click(function() {
+    $(".plus").click(function () {
         var t = $(this).parent().find('.am-num-text');
         t.val(parseInt(t.val()) + 1);
         if (t.val() <= 1) {
@@ -169,29 +169,45 @@
         TotalPrice();
     });
     // 点击商品按钮
-    $(".GoodsCheck").click(function() {
+    $(".GoodsCheck").click(function () {
         var goods = $(this).closest(".one-shop").find(".GoodsCheck"); //获取本店铺的所有商品
         var goodsC = $(this).closest(".one-shop").find(".GoodsCheck:checked"); //获取本店铺所有被选中的商品
         var Shops = $(this).closest(".one-shop").find(".ShopCheck"); //获取本店铺的全选按钮
         if (goods.length == goodsC.length) { //如果选中的商品等于所有商品
             Shops.prop('checked', true); //店铺全选按钮被选中
-            if ($(".ShopCheck").length == $(".ShopCheck:checked").length) { //如果店铺被选中的数量等于所有店铺的数量
+            console.log($(".ShopCheck:checked").length);
+            console.log($(".ShopCheck").length);
+            if ($(".GoodsCheck").length == $(".GoodsCheck:checked").length) { //如果商品被选中的数量等于所有商品的数量
                 $("#AllCheck").prop('checked', true); //全选按钮被选中
                 TotalPrice();
             } else {
                 $("#AllCheck").prop('checked', false); //else全选按钮不被选中
                 TotalPrice();
             }
+
+            TotalPrice();
+        } else if (goodsC.length == 0) {
+            Shops.prop('checked', false);//店铺全选按钮不被选中
+            $("#AllCheck").prop('checked', false); //全选按钮也不被选中
         } else { //如果选中的商品不等于所有商品
-            Shops.prop('checked', false); //店铺全选按钮不被选中
+            Shops.prop('checked', true); //店铺全选按钮被选中
+
             $("#AllCheck").prop('checked', false); //全选按钮也不被选中
             // 计算
             TotalPrice();
             // 计算
         }
+//        if ($(".ShopCheck").length == $(".ShopCheck:checked").length) { //如果店铺被选中的数量等于所有店铺的数量
+//            $("#AllCheck").prop('checked', true); //全选按钮被选中
+//            TotalPrice();
+//        } else {
+//            $("#AllCheck").prop('checked', false); //else全选按钮不被选中
+//            TotalPrice();
+//        }
+
     });
     // 点击店铺按钮
-    $(".ShopCheck").change(function() {
+    $(".ShopCheck").change(function () {
         if ($(this).prop("checked") == true) { //如果店铺按钮被选中
             $(this).parents(".one-shop").find(".goods-check").prop('checked', true); //店铺内的所有商品按钮也被选中
             if ($(".ShopCheck").length == $(".ShopCheck:checked").length) { //如果店铺被选中的数量等于所有店铺的数量
@@ -208,7 +224,7 @@
         }
     });
     // 点击全选按钮
-    $("#AllCheck").click(function() {
+    $("#AllCheck").click(function () {
         if ($(this).prop("checked") == true) { //如果全选按钮被选中
             $(".goods-check").prop('checked', true); //所有按钮都被选中
             TotalPrice();
@@ -221,9 +237,9 @@
 
     function TotalPrice() {
         var allprice = 0; //总价
-        $(".one-shop").each(function() { //循环每个店铺
+        $(".one-shop").each(function () { //循环每个店铺
             var oprice = 0; //店铺总价
-            $(this).find(".GoodsCheck").each(function() { //循环店铺里面的商品
+            $(this).find(".GoodsCheck").each(function () { //循环店铺里面的商品
                 if ($(this).is(":checked")) { //如果该商品被选中
                     var num = parseInt($(this).parents(".one-goods").find(".am-num-text").val()); //得到商品的数量
                     var price = parseFloat($(this).parents(".one-goods").find(".GoodsPrice").text()); //得到商品的单价
@@ -240,4 +256,8 @@
 </script>
 </body>
 
+</html>
+
+
+</BODY>
 </html>

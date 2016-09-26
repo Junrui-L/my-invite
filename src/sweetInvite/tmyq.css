@@ -1,0 +1,182 @@
+﻿@charset "UTF-8";
+body {
+  background: #f9d448; }
+
+section {
+  padding-top: .5rem;
+  padding-bottom: .2rem;
+  width: 100%;
+  background: #f9d448 url("http://weixin.ygs001.com/weixin/resources/wx/images/tmyq.png") no-repeat left top;
+  background-size: 100%;
+  position: relative; 
+ 
+}
+  section .yqhy {
+    display: block;
+    margin: 0 auto 3rem;
+    width: 80%;
+    height: auto;
+    -webkit-transform: translateY(-600px) rotate(80deg);
+    transform: translateY(-600px) rotate(80deg);
+    /*向前冲动画*/
+    -webkit-animation: down 500ms linear 700ms 1 forwards;
+    /* Safari and Chrome */
+    animation: down 500ms linear 700ms 1 forwards;
+	 z-index:9999 ;
+	position: relative;
+    /* Safari and Chrome */ }
+@-webkit-keyframes down {
+  0% {
+    opacity: .8;
+    -webkit-transform: translateY(-600px) rotate(-80deg); }
+  20% {
+    opacity: 1;
+    -webkit-transform: translateY(-300px) rotate(40deg); }
+  60% {
+    opacity: 0.8;
+    -webkit-transform: translateY(100px) rotate(-60deg); }
+  80% {
+    opacity: 1;
+    -webkit-transform: translateY(50px) rotate(40deg); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0) rotate(0deg); } }
+@keyframes down {
+  0% {
+    opacity: .8;
+    transform: translateY(-600px) rotate(-80deg); }
+  20% {
+    opacity: 1;
+    transform: translateY(-300px) rotate(40deg); }
+  60% {
+    opacity: 1;
+    transform: translateY(100px) rotate(-60deg); }
+  80% {
+    opacity: 1;
+    transform: translateY(50px) rotate(40deg); }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg); } }
+  section .send, section .geM {
+    position: absolute;
+    height: auto;
+    animation: swiper-left ;
+  }
+
+/*--媒体查询进行各分辨率适配--*/
+/*iphone5*/
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  section .send {
+    width: .98rem;
+    height: auto;
+    right: -240%;
+    top: 1.7rem;
+    animation: swiper-right 500ms ease 2s 1 forwards;
+  }
+@-webkit-keyframes swiper-right {
+  0%{
+    right: -240%;
+  }
+  100%{
+    right: 4%;
+  }
+}
+  section .geM {
+    width: 1.6rem;
+    height: auto;
+    left: -200%;
+    top: 2rem;
+    animation: swiper-left 300ms ease 1.2s 1 forwards;
+  }
+}
+@-webkit-keyframes swiper-left {
+  0%{
+    left: -200%;
+  }
+  100%{
+    left: 4%;
+  }
+}
+/*iphone6*/
+@media screen and (min-width: 375px) and (max-width: 627px) {
+  section .yqhy {
+    margin: .15rem auto 3rem;
+  }
+
+  section .send {
+    width: .98rem;
+    height: auto;
+    right: -240%;
+    top: 2.2rem;
+    animation: swiper-right 500ms ease 2s 1 forwards;
+  }
+
+  @-webkit-keyframes swiper-right {
+    0% {
+      right: -24%;
+    }
+    100% {
+      right: 4%;
+    }
+  }
+
+  section .geM {
+    width: 1.6rem;
+    height: auto;
+    left:-240%;
+    top: 2.3rem;
+    animation: swiper-left 300ms ease 1.2s 1 forwards;
+  }
+
+  @-webkit-keyframes swiper-left {
+    0% {
+      left: -200%;
+    }
+    100% {
+      left: 4%;
+    }
+  }
+
+}
+/*iphone6plus*/
+@media screen and (min-width: 414px) and (max-width: 736px) {
+  section .yqhy {
+    margin: .2rem auto 3rem;
+  }
+
+  section .send {
+    width: .98rem;
+    height: auto;
+    right: -240%;
+    top: 2.4rem;
+    animation: swiper-right 500ms ease 2s 1 forwards;
+  }
+
+  @-webkit-keyframes swiper-right {
+    0% {
+      right: -24%;
+    }
+    100% {
+      right: 4%;
+    }
+  }
+
+  section .geM {
+    width: 1.6rem;
+    height: auto;
+    left: -240%;
+    top: 2.2rem;
+    animation: swiper-left 300ms ease 1.2s 1 forwards;
+  }
+
+  @-webkit-keyframes swiper-left {
+    0% {
+      left: -200%;
+    }
+    100% {
+      left: 4%;
+    }
+  }
+
+}
+/*# sourceMappingURL=tmyq.css.map */

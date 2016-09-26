@@ -1,0 +1,167 @@
+@charset "UTF-8";
+/*字体的大小*/
+html, body {
+  height: 100%;
+  width: 100%;
+  background: #f0efed; }
+
+.add-wrap {
+  padding-top: 0.4rem;
+  width: 100%;
+  min-height: 0.4rem;
+  font-size: 0.24rem;
+  font-size: 16px; }
+  [data-dpr="2"] .add-wrap {
+    font-size: 32px; }
+  [data-dpr="2.5"] .add-wrap {
+    font-size: 40px; }
+  [data-dpr="2.75"] .add-wrap {
+    font-size: 44px; }
+  [data-dpr="3"] .add-wrap {
+    font-size: 48px; }
+
+.form-group {
+  height: 1.33333rem;
+  line-height: 1.33333rem;
+  background: #fff;
+  width: 100%;
+  border-top: 0.01333rem solid #dcdcdc;
+  margin-bottom: 0.13333rem;
+  box-sizing: border-box;
+  padding-left: 0.4rem; }
+  .form-group label {
+    width: 3.2rem; }
+  .form-group input {
+    border: none;
+    outline: none;
+    font-size: 16px; }
+    [data-dpr="2"] .form-group input {
+      font-size: 32px; }
+    [data-dpr="2.5"] .form-group input {
+      font-size: 40px; }
+    [data-dpr="2.75"] .form-group input {
+      font-size: 44px; }
+    [data-dpr="3"] .form-group input {
+      font-size: 48px; }
+
+.form-group1 {
+  padding-left: 0.4rem;
+  background: #fff;
+  border-bottom: 0.01333rem solid #dcdcdc;
+  margin-bottom: 0.4rem; }
+  .form-group1 select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    outline: none;
+    height: 1.33333rem;
+    padding: 0 0.4rem;
+    font-size: 18px;
+    font-family: "Microsoft Yahei", "微软雅黑", Arial, Tahoma;
+    border-bottom: 0.01333rem solid #dcdcdc;
+    width: 4rem; }
+    [data-dpr="2"] .form-group1 select {
+      font-size: 36px; }
+    [data-dpr="2.5"] .form-group1 select {
+      font-size: 45px; }
+    [data-dpr="2.75"] .form-group1 select {
+      font-size: 49.5px; }
+    [data-dpr="3"] .form-group1 select {
+      font-size: 54px; }
+  .form-group1 label {
+    display: inline-block;
+    width: 4em;
+    height: 1.33333rem;
+    line-height: 1.33333rem;
+    text-align: right;
+    position: relative; }
+  .form-group1 label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 4.26667rem;
+    bottom: 0.26667rem;
+    background: #fff url(../images/optionS.png) no-repeat left -0.48rem;
+    background-size: 0.96rem 0.96rem;
+    height: 0.48rem;
+    width: 0.48rem; }
+  .form-group1 div:last-child select {
+    border: 0; }
+
+.form-group2 {
+  min-height: 1.33333rem;
+  background: #fff;
+  padding-left: 0.4rem;
+  margin-bottom: 0.26667rem; }
+  .form-group2 label {
+    float: left;
+    width: 3.2rem;
+    height: 1.33333rem;
+    line-height: 1.33333rem; }
+  .form-group2 input {
+    border: none;
+    outline: none;
+    width: 70%;
+    line-height: 1.33333rem;
+    font-size: 16px; }
+    [data-dpr="2"] .form-group2 input {
+      font-size: 32px; }
+    [data-dpr="2.5"] .form-group2 input {
+      font-size: 40px; }
+    [data-dpr="2.75"] .form-group2 input {
+      font-size: 44px; }
+    [data-dpr="3"] .form-group2 input {
+      font-size: 48px; }
+
+.check-group {
+  padding-left: 0.4rem;
+  line-height: 0.48rem; }
+  .check-group input {
+    float: left;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 0.48rem;
+    width: 0.48rem;
+    background: url(../images/optionS.png) no-repeat -0.48rem 0;
+    background-size: 0.96rem 0.96rem; }
+  .check-group input:checked {
+    float: left;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 0.48rem;
+    width: 0.48rem;
+    background: url(../images/optionS.png) no-repeat 0 0;
+    background-size: 0.96rem 0.96rem; }
+  .check-group span {
+    float: left;
+    font-size: 14px;
+    line-height: 0.48rem; }
+    [data-dpr="2"] .check-group span {
+      font-size: 28px; }
+    [data-dpr="2.5"] .check-group span {
+      font-size: 35px; }
+    [data-dpr="2.75"] .check-group span {
+      font-size: 38.5px; }
+    [data-dpr="3"] .check-group span {
+      font-size: 42px; }
+
+.btn {
+  display: block;
+  background: none;
+  border: none;
+  height: 1.06667rem;
+  width: 80%;
+  font-size: 18px;
+  background-color: #ff6d00;
+  color: #fff;
+  margin: 2.66667rem auto 0; }
+  [data-dpr="2"] .btn {
+    font-size: 36px; }
+  [data-dpr="2.5"] .btn {
+    font-size: 45px; }
+  [data-dpr="2.75"] .btn {
+    font-size: 49.5px; }
+  [data-dpr="3"] .btn {
+    font-size: 54px; }
+
+/*# sourceMappingURL=shdz.css.map */

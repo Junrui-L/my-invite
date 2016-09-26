@@ -1,0 +1,39 @@
+@charset "UTF-8";
+body {
+  font-size: .16rem;
+  font-family: "Microsoft Yahei","微软雅黑",Arial,Tahoma;
+  background-color: #eee; }
+
+header {
+  height: .44rem;
+  padding: 0 .16rem; }
+  header h1 {
+    height: .44rem;
+    font-size: .22rem;
+    line-height: .44rem;
+    color: #fb9f5e; }
+
+section {
+  padding: 0 .16rem .3rem;
+  font-size: .16rem; }
+  section h3 {
+    font-size: .2rem;
+    padding: .1rem 0;
+    color: #000; }
+  section img {
+    display: block;
+    border: none;
+    width: 100%;
+    margin: .26rem 0 0; }
+  section p {
+    line-height: .28rem;
+    text-indent: 2em; }
+  section .ruleTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .14rem;
+    margin: .3rem auto; }
+    section .ruleTable th, section .ruleTable td {
+      border: 1px solid #eee; }
+
+/*# sourceMappingURL=tmgz.css.map */
