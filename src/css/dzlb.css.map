@@ -1,7 +1,7 @@
 {
 "version": 3,
 "mappings": "AAIA,UAAW;EACT,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;EACX,UAAU,EAAE,OAAO",
-"sources": ["dzlb.scss"],
+"sources": ["../receiverAdress/scss/dzlb.scss"],
 "names": [],
 "file": "dzlb.css"
 }
