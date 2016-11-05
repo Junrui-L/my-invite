@@ -1,0 +1,126 @@
+html, body {
+  max-width: 640px;
+  min-height: 16rem;
+  background: #fedc7a url(../images/lucyDraw_bg.png) no-repeat 0 0;
+  background-size: contain;
+}
+
+body {
+  padding-top: 3.2rem;
+}
+
+.turnplate {
+  width: 8.66667rem;
+  height: 8.66667rem;
+  margin: 0 auto;
+  background: url(../images/turnplate.png) no-repeat 0 0;
+  background-size: contain;
+  position: relative;
+  z-index: 21;
+}
+.turnplate .btn {
+  font-size: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 1.86667rem;
+  height: 1.86667rem;
+  background: url(../images/btn.png) no-repeat 0 0;
+  background-size: cover;
+}
+.prize {
+  font-size: 0.32rem;
+  font-weight: 700;
+  color: #de755f;
+  text-align: center;
+}
+.prize .one, .prize .two, .prize .three, .prize .four, .prize .five, .prize .six, .prize .seven, .prize .eight, .prize .nine, .prize .ten {
+  position: absolute;
+  width: 1.6rem;
+  height: 0.8rem;
+}
+.prize .one {
+  top: 1.08rem;
+  left: 3.56rem;
+}
+.prize .two {
+  top: 1.8rem;
+  left: 5.2rem;
+}
+.prize .three {
+  top: 3.29333rem;
+  left: 6.06667rem;
+}
+.prize .four {
+  top: 4.53333rem;
+  left: 6.06667rem;
+}
+.prize .five {
+  top: 5.93333rem;
+  left: 5.2rem;
+}
+.prize .six {
+  top: 6.8rem;
+  left: 3.56rem;
+}
+.prize .seven {
+  top: 5.93333rem;
+  left: 2.05333rem;
+}
+.prize .eight {
+  top: 4.53333rem;
+  left: 1.2rem;
+}
+.prize .nine {
+  top: 3.29333rem;
+  left: 1.2rem;
+}
+.prize .ten {
+  top: 1.8rem;
+  left: 2.05333rem;
+}
+
+.shadow {
+  height: 0.29333rem;
+  width: 100%;
+  margin: -0.10667rem auto 2rem;
+  position: relative;
+  z-index: 15;
+  background: url(../images/shadow.png) no-repeat;
+  background-size: cover;
+}
+
+.decoration {
+  padding-left: 0.26667rem;
+  padding-right: 0.53333rem;
+  padding-bottom: 1.33333rem;
+  font-weight: 700;
+}
+.decoration .title {
+  font-size: 0.42667rem;
+  width: 2rem;
+  height: 0.50667rem;
+  line-height: 0.53333rem;
+  border: 1px solid #f67220;
+  background: #fcac33;
+  color: #fff;
+  text-align: center;
+}
+.decoration .time, .decoration .give-out, .decoration .use {
+  font-size: 0.32rem;
+  color: #ae782e;
+  line-height: 0.66667rem;
+  margin-bottom: 0.2rem;
+}
+.decoration .time {
+  margin-top: 0.4rem;
+}
+.decoration span {
+  border: 1px solid #ff8a22;
+  padding: 0.06667rem;
+}
+
+/*# sourceMappingURL=luckydraw.css.map */

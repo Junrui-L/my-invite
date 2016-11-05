@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>幸运大抽奖</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta content="telephone=no" name="format-detection"/>
+    <meta content="email=no" name="format-detection"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/luckydraw.css">
+    <script>
+        var dpr, rem;
+        var docEl = document.documentElement;
+        var fontEl = document.createElement('style');
+        dpr = window.devicePixelRatio || 1;
+        rem = docEl.clientWidth * dpr / 10;
+        docEl.firstElementChild.appendChild(fontEl);
+        fontEl.innerHTML = 'html{font-size:' + rem / dpr + 'px!important;}';
+        window.dpr = dpr;
+        window.rem = rem;
+    </script>
+</head>
+<body>
+<div class="turnplate">
+    <div class="btn">狠戳</div>
+    <ul class="prize">
+        <li class="one">小快修<br>100元</li>
+        <li class="two">轻松到家<br>900元</li>
+        <li class="three">优秀旅游<br>300元</li>
+        <li class="four">康熙来了<br>100元</li>
+        <li class="five">康熙来了<br>300元</li>
+        <li class="six">轻松到家<br>500元</li>
+        <li class="seven">田田农场<br>500元</li>
+        <li class="eight">谢谢参与<br>100元</li>
+        <li class="nine">优秀旅游<br>300元</li>
+        <li class="ten">康熙来了<br>100元</li>
+    </ul>
+</div>
+<div class="shadow"></div>
+<div class="decoration">
+    <h1 class="title">规则如下</h1>
+    <div class="time"><span>时间</span>：11月7日 - 11月18日</div>
+    <div class="give-out"><span>优惠券发放规则</span>
+        ：活动期间每人共有10次抽奖机会（任意两天参
+        与，一天5次）
+    </div>
+    <dl class="use">
+        <dt class="tit"><span>优惠券使用规则</span>：</dt>
+        <dd> 1）请在使用优惠券前，了解优惠券说明。部分优惠券为满减券，
+            订单必须达到一定金额才能使用；
+        </dd>
+        <dd>
+            2）使用优惠券支付的订单，如发生退货，退款结算按照实际结算
+            金额退款，优惠券不予兑现、重发；
+        </dd>
+        <dd>
+            3）优惠券必须在有效期内使用，每张订单只能使用一张优惠券，
+            可与其它促销活动同时享用，优惠券一旦使用将无法退回；
+        </dd>
+        <dd>
+            4）如发现恶意刷单、虚假交易等，移公社将取消用户活动资格，
+            并保留追究法律责任的权利；
+        </dd>
+        <dd>
+            5）本细则最终解释权归移公社所有。
+        </dd>
+    </dl>
+</div>
+</body>
+</html>

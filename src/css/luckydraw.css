@@ -1,0 +1,21 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+h3 {
+  width: auto;
+  height: 300px;
+  border: 1px solid #2d2e2f;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  counter-reset: inherit;
+}
+
+.wit {
+  width: 200px;
+  height: 20px;
+  border-right: 1px solid #ddd;
+}
+
+/*# sourceMappingURL=luckydraw.css.map */

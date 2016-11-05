@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+@function pxTorem($px) {
+  //$px为需要转换的尺寸
+  @return $px / 75px * 1rem;
+}
+html {
+  //font-size: 15px;
+  height: 100%;
+  background: #f9f9f9;
+}
+
+body {
+  padding: pxTorem(30px);
+  min-height: pxTorem(1200px);
+  background: #f9f9f9;
+}
+
+.coupons {
+  height: pxTorem(200px);
+  background:url("../images/coupon_bg.png") no-repeat center ;
+  background-size: 100% 100%;
+  margin-bottom: pxTorem(10px);
+
+  .value, .content  {
+    float: left;
+  }
+
+  @at-root .value {
+    width: 25%;
+    height: pxTorem(140px);
+    padding-top: pxTorem(30px);
+    padding-left: pxTorem(60px);
+    color: #ff6c00;
+    b {
+      line-height: pxTorem(40px);
+      font-size: pxTorem(60px);
+    }
+    span {
+      font-size: pxTorem(40px);
+    }
+  }
+
+  @at-root .content {
+    height: pxTorem(179px);
+    padding-top: pxTorem(21px);
+    padding-left: pxTorem(64px);
+    line-height: pxTorem(60px);
+    width: 55%;
+    overflow: hidden;
+    .over-reduce, .store {
+      font-size: pxTorem(32px);
+      font-weight: 700;
+      color: #323232;
+    }
+    .store {
+      width: 90%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .time-line {
+      color: #fff;
+      font-size: 14px;
+    }
+  }
+
+}

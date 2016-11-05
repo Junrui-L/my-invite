@@ -1,0 +1,146 @@
+@charset "utf-8";
+
+@function pxTorem($px) {
+  //$px为需要转换的尺寸
+  @return $px / 75px * 1rem;
+}
+
+html, body {
+  max-width: 640px;
+  min-height: pxTorem(1200px);
+  background:#fedc7a  url(../images/lucyDraw_bg.png) no-repeat 0 0;
+  background-size: contain;
+}
+
+body {
+  padding-top: pxTorem(240px);
+}
+
+.turnplate {
+  width: pxTorem(650px);
+  height: pxTorem(650px);
+  margin: 0 auto;
+  background:url(../images/turnplate.png) no-repeat 0 0;
+  background-size: contain;
+  position: relative;
+  z-index: 21;
+  .btn {
+    font-size: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: pxTorem(140px);
+    height: pxTorem(140px);
+    background: url(../images/btn.png) no-repeat 0 0;
+    background-size: cover;
+  }
+
+  @at-root .prize {
+    font-size: pxTorem(24px);
+    font-weight: 700;
+    color: #de755f;
+    text-align: center;
+
+    .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten {
+      position: absolute;
+      width: pxTorem(120px);
+      height: pxTorem(60px);
+    }
+
+    .one {
+      top: pxTorem(81px);
+      left: pxTorem(267px);
+    }
+
+    .two {
+      top: pxTorem(135px);
+      left: pxTorem(390px);
+    }
+
+    .three {
+      top: pxTorem(247px);
+      left: pxTorem(455px);
+    }
+
+    .four {
+      top: pxTorem(340px);
+      left: pxTorem(455px);
+    }
+
+    .five {
+      top: pxTorem(445px);
+      left: pxTorem(390px);
+    }
+
+    .six {
+      top: pxTorem(510px);
+      left: pxTorem(267px);
+    }
+    .seven {
+      top: pxTorem(445px);
+      left: pxTorem(154px);
+    }
+
+    .eight {
+      top: pxTorem(340px);
+      left: pxTorem(90px);
+    }
+
+    .nine {
+      top: pxTorem(247px);
+      left: pxTorem(90px);
+    }
+    .ten {
+      top: pxTorem(135px);
+      left: pxTorem(154px);
+    }
+
+  }
+}
+
+.shadow {
+  height: pxTorem(22px);
+  width: 100%;
+  margin: pxTorem(-8px) auto pxTorem(150px);
+  position: relative;
+  z-index: 15;
+  background: url(../images/shadow.png) no-repeat;
+  background-size: cover;
+}
+
+.decoration {
+    padding-left: pxTorem(20px);
+    padding-right: pxTorem(40px);
+    padding-bottom: pxTorem(100px);
+    font-weight: 700;
+  .title {
+    font-size: pxTorem(32px);
+    width: pxTorem(150px);
+    height: pxTorem(38px);
+
+    line-height: pxTorem(40px);
+    border: 1px solid #f67220;
+    background: #fcac33;
+    color: #fff;
+    text-align: center;
+  }
+
+  .time, .give-out, .use {
+    font-size: pxTorem(24px);
+    color: #ae782e;
+    line-height: pxTorem(50px);
+    margin-bottom: pxTorem(15px);
+  }
+
+  .time {
+    margin-top: pxTorem(30px);
+
+  }
+  span {
+    border: 1px solid #ff8a22;
+    padding: pxTorem(5px);
+  }
+}

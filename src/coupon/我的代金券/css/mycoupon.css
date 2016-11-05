@@ -1,0 +1,46 @@
+html {
+  height: 100%; }
+
+body {
+  padding: 0.4rem;
+  min-height: 16rem; }
+
+.coupons {
+  height: 2.66667rem;
+  background: url("../images/coupon_bg.png") no-repeat center;
+  background-size: 100% 100%;
+  margin-bottom: 0.13333rem; }
+  .coupons .value, .coupons .content {
+    float: left; }
+  .value {
+    width: 25%;
+    height: 1.86667rem;
+    padding-top: 0.4rem;
+    padding-left: 0.8rem;
+    color: #ff6c00; }
+    .value b {
+      line-height: 0.53333rem;
+      font-size: 0.8rem; }
+    .value span {
+      font-size: 0.53333rem; }
+  .content {
+    height: 2.38667rem;
+    padding-top: 0.28rem;
+    padding-left: 0.85333rem;
+    line-height: 0.8rem;
+    width: 55%;
+    overflow: hidden; }
+    .content .over-reduce, .content .store {
+      font-size: 0.42667rem;
+      font-weight: 700;
+      color: #323232; }
+    .content .store {
+      width: 90%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    .content .time-line {
+      color: #fff;
+      font-size: 14px; }
+
+/*# sourceMappingURL=mycoupon.css.map */

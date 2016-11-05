@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>我的可用代金券</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="scss/mycoupon.css">
+    <script>
+        var dpr, rem;
+        var docEl = document.documentElement;
+        var fontEl = document.createElement('style');
+        dpr = window.devicePixelRatio || 1;
+        rem = docEl.clientWidth * dpr / 10;
+        docEl.firstElementChild.appendChild(fontEl);
+        fontEl.innerHTML = 'html{font-size:' + rem/dpr + 'px!important;}';
+        window.dpr = dpr;
+        window.rem = rem;
+    </script>
+</head>
+<body>
+    <section class="coupons clerfix">
+        <div class="value">
+            <b>50</b><span>.00</span>
+        </div>
+        <ul class="content">
+            <li class="over-reduce">满100减50</li>
+            <li class="store">小米之家的店铺</li>
+            <li class="time-line">2016-12-31</li>
+        </ul>
+    </section>
+    <section class="coupons clerfix">
+        <div class="value">
+            <b>50</b>
+            <span>.00</span>
+        </div>
+        <ul class="content">
+            <li class="over-reduce">满100减50</li>
+            <li class="store">小米之家的店铺cccccccccccccc</li>
+            <li class="time-line">2016-12-31</li>
+        </ul>
+    </section>
+    <section class="coupons clerfix">
+        <div class="value">
+            <b>50</b>
+            <span>.00</span>
+        </div>
+        <ul class="content">
+            <li class="over-reduce">满100减50</li>
+            <li class="store">小米之家的店铺</li>
+            <li class="time-line">2016-12-31</li>
+        </ul>
+    </section>
+</body>
+</html>
