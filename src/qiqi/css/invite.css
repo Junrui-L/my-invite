@@ -1,0 +1,118 @@
+@charset "UTF-8";
+/*样式重置*/
+body, h1, h2, h3, h4, h5, h6, hr, div, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td, img {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  font-family: "Microsoft YaHei", "WenQuanYi Micro Hei", Arial, SimSun, sans-serif;
+  color: #000;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*样式重置*/
+/*页面内容*/
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  padding-top: 2rem;
+  font-size: 0.42667rem;
+  background: #ffd46e url(../images/background.jpg) no-repeat;
+  background-size: 100% auto;
+  text-align: center;
+}
+.container .success {
+  font-size: 0.8rem;
+  color: #fff;
+  text-shadow: 2px 2px 0 #f96, -2px -2px 0 #f96;
+}
+.container .coupon {
+  width: 6.66667rem;
+  height: 3.6rem;
+  line-height: 1;
+  background: url(../images/red_bg.png) no-repeat 0 0;
+  background-size: contain;
+  margin: 1.06667rem auto 0.46667rem;
+  padding-top: 0.64rem;
+  color: #fff;
+}
+.container .coupon .value {
+  font-size: 0.4rem;
+}
+.container .coupon .value span {
+  font-size: 1.33333rem;
+  line-height: 0.5;
+}
+.container .coupon .kind {
+  margin-top: 0.44rem;
+  margin-bottom: 0.24rem;
+  font-size: 0.48rem;
+}
+.container .coupon .send {
+  font-size: 0.32rem;
+  color: #840300;
+}
+.container .detail {
+  font-size: 0;
+  height: 0.56rem;
+  width: 7.73333rem;
+  margin: 0 auto;
+  background: url(../images/ads.png) no-repeat;
+  background-size: contain;
+}
+.container .invite {
+  margin: 1rem auto;
+  display: block;
+  width: 5.93333rem;
+  height: 1.53333rem;
+  background: #fe5821;
+  font-size: 0.8rem;
+  text-align: center;
+  line-height: 1.53333rem;
+  color: #fff;
+  border-radius: 5%;
+}
+.container .explain {
+  font-size: 0.32rem;
+  color: #b76a0b;
+  line-height: 0.66667rem;
+  background: #fec589;
+}
+.container .steps {
+  background-color: #fff;
+  height: 4rem;
+  overflow: hidden;
+}
+.container .steps dt {
+  margin-top: 0.73333rem;
+  margin-bottom: 0.46667rem;
+  background: url("../images/line.png") no-repeat center;
+  background-size: contain;
+  color: #b7b703;
+  font-size: 0.37333rem;
+}
+.container .steps dd {
+  font-size: 0.32rem;
+  color: #919192;
+  margin-bottom: 0.33333rem;
+}
+
+/*# sourceMappingURL=invite.css.map */

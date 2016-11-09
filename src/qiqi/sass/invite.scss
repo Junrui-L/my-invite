@@ -1,0 +1,134 @@
+@charset "utf-8";
+
+@function pxTorem($px) {
+  //$px为需要转换的尺寸
+  @return $px / 75px * 1rem;
+}
+
+/*样式重置*/
+body, h1, h2, h3, h4, h5, h6, hr, div, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td, img {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+body {
+  font-family: "Microsoft YaHei", "WenQuanYi Micro Hei", Arial, SimSun, sans-serif;
+  color: #000;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*样式重置*/
+
+/*页面内容*/
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  padding-top: pxTorem(150px);
+  font-size: pxTorem(32px);
+  background:#ffd46e url(../images/background.jpg) no-repeat;
+  background-size: 100% auto;
+  text-align: center;
+  .success {
+    font-size: pxTorem(60px);
+    color: #fff;
+    text-shadow: 2px 2px 0 #f96, -2px -2px 0 #f96;
+  }
+
+  .coupon {
+    width: pxTorem(500px);
+    height: pxTorem(270px);
+    line-height: 1;
+    background: url(../images/red_bg.png) no-repeat 0 0;
+    background-size: contain;
+    margin: pxTorem(80px) auto pxTorem(35px);
+    padding-top: pxTorem(48px);
+    color: #fff;
+    .value {
+      font-size: pxTorem(30px);
+      span {
+        font-size: pxTorem(100px);
+        line-height: 0.5;
+      }
+    }
+
+    .kind {
+      margin-top: pxTorem(33px);
+      margin-bottom: pxTorem(18px);
+      font-size: pxTorem(36px);
+    }
+
+    .send {
+      font-size: pxTorem(24px);
+      color: #840300;
+    }
+
+  }
+
+  .detail {
+    font-size: 0;
+    height: pxTorem(42px);
+    width: pxTorem(580px);
+    margin: 0 auto;
+    background: url(../images/ads.png) no-repeat;
+    background-size: contain;
+  }
+
+  .invite {
+    margin: pxTorem(75px) auto;
+    display: block;
+    width: pxTorem(445px);
+    height: pxTorem(115px);
+    background: #fe5821;
+    font-size: pxTorem(60px);
+    text-align: center;
+    line-height: pxTorem(115px);
+    color: #fff;
+    border-radius: 5%;
+  }
+
+  .explain {
+    font-size: pxTorem(24px);
+    color: #b76a0b;
+    line-height: pxTorem(50px);
+    background: #fec589;
+  }
+
+
+  .steps {
+    background-color: #fff;
+    height: pxTorem(300px);
+    overflow: hidden;
+    dt {
+      margin-top: pxTorem(55px);
+      margin-bottom: pxTorem(35px);
+      background: url("../images/line.png") no-repeat center;
+      background-size: contain;
+      color: #b7b703;
+      font-size: pxTorem(28px);
+    }
+
+    dd {
+      font-size: pxTorem(24px);
+      color: #919192;
+      margin-bottom: pxTorem(25px);
+    }
+  }
+}

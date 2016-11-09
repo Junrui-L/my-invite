@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>邀请好友注册成功</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta content="telephone=no" name="format-detection"/>
+    <meta content="email=no" name="format-detection"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link rel="stylesheet" href="css/invite.css">
+    <script>
+        var dpr, rem;
+        var docEl = document.documentElement;
+        var fontEl = document.createElement('style');
+        dpr = window.devicePixelRatio || 1;
+        rem = docEl.clientWidth * dpr / 10;
+        docEl.firstElementChild.appendChild(fontEl);
+        fontEl.innerHTML = 'html{font-size:' + rem / dpr + 'px!important;}';
+    </script>
+</head>
+<body>
+    <div class="container">
+        <p class="success">邀请好友注册成功</p>
+        <!--代金券详情-->
+        <ul class="coupon">
+            <li class="value"><span>8</span> 元</li>
+            <li class="kind">口袋微交易代金券</li>
+            <li class="send">优惠券次日到账</li>
+        </ul>
+        <p class="detail"></p>
+        <!--邀请按钮-->
+        <a href="#" class="invite">立即邀请</a>
+        <p class="explain">在“首页-首页贵金属” 注册登录后在在代金账户查看</p>
+       <!--分享步骤-->
+        <dl class="steps">
+            <dt>分享步骤</dt>
+            <dd>将本页分享给好友</dd>
+            <dd>好友在分享链接领券成功</dd>
+            <dd>下载口袋微盘成功登陆即可</dd>
+        </dl>
+    </div>
+</body>
+</html>
